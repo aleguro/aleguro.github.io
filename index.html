@@ -394,6 +394,57 @@ h2 em { font-style: italic; color: var(--accent); }
 .oss-link:hover { color: var(--accent); border-color: var(--accent); }
 .oss-badge-wrap { display: flex; flex-direction: column; gap: 8px; align-items: flex-end; }
 
+/* ── ARTICLES ── */
+.articles-list { display: flex; flex-direction: column; gap: 0; }
+.article-entry {
+  display: grid;
+  grid-template-columns: 140px 1fr;
+  gap: 0 48px;
+  padding-block: 32px;
+  border-top: 1px solid var(--border);
+  align-items: start;
+}
+.article-entry:first-child { border-top: none; }
+.article-meta { padding-top: 3px; }
+.article-date {
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: .06em;
+  color: var(--fg-3);
+  margin-bottom: 8px;
+}
+.article-platform {
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: .06em;
+  padding: 3px 8px;
+  background: var(--accent-lo);
+  color: var(--accent);
+  border-radius: 2px;
+  display: inline-block;
+}
+.article-title {
+  font-family: var(--serif);
+  font-size: 20px;
+  font-weight: 400;
+  color: var(--fg);
+  margin-bottom: 10px;
+  line-height: 1.25;
+}
+.article-title a {
+  color: inherit;
+  text-decoration: none;
+  border-bottom: 1px solid var(--border);
+  transition: color .2s, border-color .2s;
+}
+.article-title a:hover { color: var(--accent); border-color: var(--accent); }
+.article-desc {
+  font-size: 14px;
+  color: var(--fg-2);
+  line-height: 1.6;
+  max-width: 540px;
+}
+
 /* ── CONTACT ── */
 .contact-wrap {
   display: grid;
@@ -499,6 +550,7 @@ footer {
     <li><a href="#experience">Experience</a></li>
     <li><a href="#skills">Skills</a></li>
     <li><a href="#oss">Open Source</a></li>
+    <li><a href="#articles">Articles</a></li>
     <li><a href="#contact">Contact</a></li>
   </ul>
   <a class="nav-cta" href="#contact">Get in touch</a>
@@ -716,6 +768,31 @@ footer {
       <span class="skill-tag" style="font-size:11px;">MIT</span>
       <span class="skill-tag" style="font-size:11px;">Ruby ≥ 3.2</span>
     </div>
+  </div>
+</section>
+
+<!-- ARTICLES -->
+<section id="articles" style="padding-top: 0;">
+  <div class="section-label">Writing</div>
+  <div class="articles-list">
+
+    <div class="article-entry reveal">
+      <div class="article-meta">
+        <div class="article-date">Oct 2026</div>
+        <span class="article-platform">dev.to</span>
+      </div>
+      <div>
+        <div class="article-title">
+          <a href="https://dev.to/ale_guro_f978e86cfa6ff51f/odsl-a-ruby-dsl-for-service-objects-that-llms-can-actually-understand-5036" target="_blank">
+            ODSL: A Ruby DSL for Service Objects That LLMs Can Actually Understand
+          </a>
+        </div>
+        <p class="article-desc">
+          Why I built ODSL — and how writing code as a sequence of named, declarative steps turns out to be exactly the format that makes LLM-assisted development click.
+        </p>
+      </div>
+    </div>
+
   </div>
 </section>
 
